@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../hoc/index";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
@@ -11,6 +11,13 @@ const FeedbackCards = ({
   designation,
   company,
   image,
+}: {
+  index: number;
+  testimonial: string;
+  name: string;
+  designation: string;
+  company: string;
+  image: string;
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
@@ -34,7 +34,7 @@ const ComputersCanvas = () => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches); //on page load
 
-    const handleMediaQueryChange = (e) => {
+    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches); //on change event
     };
 

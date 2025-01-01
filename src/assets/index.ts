@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
+import backend1 from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
@@ -20,6 +20,12 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import express from "./tech/express.png";
+import postgreSQL from "./tech/postgreSQL.svg";
+import redis from "./tech/redis.png";
+import azure from "./tech/azure.png";
+import jenkins from "./tech/jenkins.png";
+import mssql from "./tech/mssql.svg";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -31,9 +37,15 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import logom from "./logom.webp";
 
+import live54e from "./tech/live54e.png";
+import infy from "./tech/infy.png";
+import capgemini from "./tech/capgemini.png";
+import softlink from "./tech/softlink.jpg";
+import lionbridge from "./tech/lionbridge.png";
+
 export {
   logo,
-  backend,
+  backend1,
   creator,
   mobile,
   web,
@@ -61,4 +73,15 @@ export {
   jobit,
   tripguide,
   logom,
+  express,
+  postgreSQL,
+  redis,
+  azure,
+  jenkins,
+  mssql,
+  live54e,
+  infy,
+  capgemini,
+  softlink,
+  lionbridge
 };

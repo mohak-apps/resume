@@ -1,6 +1,6 @@
 import {
   mobile,
-  backend,
+  backend1,
   creator,
   web,
   javascript,
@@ -8,21 +8,26 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  live54e,
+  infy,
+  capgemini,
+  softlink,
+  lionbridge,
   carrent,
   jobit,
   tripguide,
   threejs,
+  express,
+  postgreSQL,
+  redis,
+  azure,
+  jenkins,
+  mssql,
 } from "../assets";
 
 export const navLinks = [
@@ -51,7 +56,7 @@ const services = [
   },
   {
     title: "Backend Developer",
-    icon: backend,
+    icon: backend1,
   },
   {
     title: "Content Creator",
@@ -59,112 +64,157 @@ const services = [
   },
 ];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-];
+const technologies = {
+  frontend: [
+    {
+      name: "HTML 5",
+      icon: html,
+    },
+    {
+      name: "CSS 3",
+      icon: css,
+    },
+    {
+      name: "JavaScript",
+      icon: javascript,
+    },
+    {
+      name: "TypeScript",
+      icon: typescript,
+    },
+    {
+      name: "React JS / React Native",
+      icon: reactjs,
+    },
+    {
+      name: "Three JS",
+      icon: threejs,
+    },
+    {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
+    // {
+    //   name: "Figma",
+    //   icon: figma,
+    // },
+  ],
+  backend: [
+    {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "Express",
+      icon: express,
+    },
+  ],
+  database: [
+    {
+      name: "MongoDB",
+      icon: mongodb,
+    },
+    {
+      name: "PostgreSQL",
+      icon: postgreSQL,
+    },
+    {
+      name: "Redis",
+      icon: redis,
+    },
+    {
+      name: "MS_SQL",
+      icon: mssql,
+    },
+  ],
+  versionControl: [
+    {
+      name: "Git",
+      icon: git,
+    },
+    {
+      name: "Github",
+      icon: redis,
+    },
+    {
+      name: "Azure",
+      icon: azure,
+    },
+  ],
+  cicd: [
+    {
+      name: "Docker",
+      icon: docker,
+    },
+    {
+      name: "Jenkins",
+      icon: jenkins,
+    },
+  ],
+};
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Software Developer",
+    company_name: "54e Dev Studios",
+    icon: live54e,
+    iconBg: "#FFF",
+    date: "January 2023 - June 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Integrated new mobile gaming app specific features while optimizing existing code structure through custom hooks, resulting in a 30% improvement in page rendering speed and smoother navigation between pages.",
+      "Developed complex game animations using React Native Reanimated and leveraged Skia to create high-performance graphics, delivering smooth and visually appealing animations that enhanced user engagement and visual appeal.",
+      "Provided application support and maintenance with routine upgrades, error handling and code reviews to ensure a smooth user experience while monitoring Discord channels for user feedback and updates, resulting in a 25% increase in new user retention.",
+      "Designed and built an intuitive web-based management dashboard for the internal  support team providing clear insights, support metrics and facilitating quick decision-making.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Technology Analyst",
+    company_name: "Infosys Limited",
+    icon: infy,
+    iconBg: "#FFF",
+    date: "December 2018 - December 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and customized the Finacle application front end using React.js, leveraging the FEBA (Finacle E-Banking System) framework and utilized Bootstrap to enhance the user interface and create a responsive design.",
+      "Collaborated with system designers, business analysts, and the in-house testing team during business requirements reviews at the client location, which facilitated the rapid delivery of critical bug fixes and new feature requirements.",
+      "Designed and developed a mobile app for a leading sports tournament organization that delivered real-time match insights and notifications.",
+      "Integrated the Brightcove video player into the app to provide seamless streaming of live matches and on-demand video content, enhancing user experience during peak match times with the capability to handle up to one million concurrent viewers.",
+      "Provided continuous improvement and support post-launch, addressed user feedback and implemented enhancements as required.",
+    ],
+  },
+  {
+    title: "Associate Consultant",
+    company_name: "Capgemini Ltd",
+    icon: capgemini,
+    iconBg: "#FFF",
+    date: "October 2017 - December 2018",
+    points: [
+      "Developed and maintained HSBC's internal web application based on wireframes using React.js to enhance user experience and streamline access to critical information. Implemented Node.js end points to facilitate calls to MuleSoft APIs, ensuring seamless integration between front-end and back-end services using Axios calls.",
+      "Conducted test driven development using Jest and Enzyme for test automation achieving 85% coverage and reducing regression bug incidents.",
+      "Performed comprehensive technical documentation in Confluence post-sprint planning, participating in key ceremonies, outlining estimated timelines and priorities, and allotted tasks based on leveraging individual strengths within the team.",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    company_name: "SoftLink Global Ltd",
+    icon: softlink,
+    iconBg: "#FFF",
+    date: "October 2015 - October 2017",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Pioneered the adoption of React in the company transforming legacy ASP.NET interfaces into React JS for optimized performance, leading to a 50% improvement in responsiveness and reduced page load times.",
+      "Developed React and Redux skeleton units and reusable components, and maintained a comprehensive SharePoint site documenting industry trends, core principles and best coding practices to improve framework familiarity and thus  expediting transition process.",
+      "Coordinated and mentored developers with detailed presentations on React to enhance project collaboration and facilitated team alignment on migration efforts.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Apprentice Web Developer",
+    company_name: "Lionbridge Technologies Inc",
+    icon: lionbridge,
+    iconBg: "#FFF",
+    date: "May 2013 - August 2014",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Implemented interactive learning courses and responsive UI pages using HTML5, CSS, JavaScript, and jQuery, while leveraging ASP.NET Web Forms, LINQ, and Entity Framework for back-end database access.",
+      "Integrated interactive multimedia elements and gamification features into e-learning modules, resulting in a 30% increase in user engagement and course completion rates, while maintaining optimal performance across various browsers.",
+      "Implemented comprehensive accessibility features, including advanced keyboard navigation and screen reader optimization, adhering to WCAG 2.1 AA standards.",
     ],
   },
 ];

@@ -10,8 +10,9 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import type { Experience } from "../types";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}
@@ -71,4 +72,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "experience");
+export default SectionWrapper(Experience, "work");

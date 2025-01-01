@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -10,7 +10,8 @@ import {
 
 import CanvasLoader from "../Loader";
 
-const Ball = (props) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Ball = (props: any) => {
   const [decal] = useTexture([props.imgUrl]);
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
@@ -34,7 +35,7 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon }: { icon: string }) => {
   return (
     <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
