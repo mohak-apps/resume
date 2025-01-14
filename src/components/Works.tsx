@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
@@ -89,11 +88,6 @@ const Works = () => {
           Tools: GitHub, Microsoft Azure Soft Skills: Fluent Verbal / Written
           Communication, Quick learner, Self-directed, Team Player
         </motion.p>
-      </div>
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((p, i) => (
-          <ProjectCard key={`project${i}`} index={i} {...p} />
-        ))}
       </div>
     </>
   );

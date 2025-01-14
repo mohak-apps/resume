@@ -5,84 +5,65 @@ import { styles } from "../styles";
 
 const Tech = () => {
   return (
-    <div>
-      <div className="flex border-2 flex-row h-full items-center">
-        <p className={`${styles.sectionSubText} w-52 border-sky-200`}>
-          Frontend:
-        </p>
-        <div className="flex flex-row flex-wrap  gap-10 w-full">
-          {technologies.frontend.map((tech) => (
-            <div
-              className="w-28 h-28 flex justify-center items-center"
-              key={tech.name}
-            >
-              <div className="flex justify-center items-center w-full h-full">
-                <BallCanvas icon={tech.icon} />
+    <div className="bg-white/30 mx-full my-40 backdrop-blur-md border-4 border-white rounded-2xl p-8">
+      <div className="flex flex-col h-full items-center">
+        <p className={`${styles.sectionSubText} w-52`}></p>
+        <div className="flex flex-row flex-wrap gap-10 w-full justify-evenly">
+          {technologies.frontend.map((tech) => {
+            return (
+              <div className="w-28 h-28 flex" key={tech.name}>
+                <div className="flex w-full h-full">
+                  <BallCanvas icon={tech.icon} />
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
-      <div className="flex flex-row h-full items-center">
-        <p className={`${styles.sectionSubText} w-52 border-sky-200`}>
-          Backend:
-        </p>
-        <div className="flex flex-row flex-wrap gap-10 w-full">
+      <div className="flex flex-col h-full items-center">
+        <p className={`${styles.sectionSubText} w-52`}></p>
+        <div className="flex flex-row flex-wrap gap-10 w-full justify-center">
           {technologies.backend.map((tech) => (
-            <div
-              className="w-28 h-28 flex justify-center items-center"
-              key={tech.name}
-            >
-              <div className="flex justify-center items-center w-full h-full">
+            <div className="w-28 h-28 flex" key={tech.name}>
+              <div className="flex w-full h-full">
                 <BallCanvas icon={tech.icon} />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex flex-row h-full items-center">
+      <div className="flex flex-col h-full items-center">
         <p className={`${styles.sectionSubText} w-52 border-sky-200`}>
-          Database:
         </p>
-        <div className="flex flex-row flex-wrap   gap-10 w-full">
+        <div className="flex flex-row flex-wrap gap-10 w-full justify-evenly">
           {technologies.database.map((tech) => (
-            <div
-              className="w-28 h-28 flex justify-center items-center"
-              key={tech.name}
-            >
-              <div className="flex justify-center items-center w-full h-full">
+            <div className="w-28 h-28 flex " key={tech.name}>
+              <div className="flex  w-full h-full">
                 <BallCanvas icon={tech.icon} />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex flex-row h-full items-center">
+      <div className="flex flex-col h-full items-center">
         <p className={`${styles.sectionSubText} w-52 border-sky-200`}>
-          Version Control:
         </p>
-        <div className="flex flex-row flex-wrap gap-10 w-full">
+        <div className="flex flex-row flex-wrap gap-10 w-full justify-evenly">
           {technologies.versionControl.map((tech) => (
-            <div
-              className="w-28 h-28 flex justify-center items-center"
-              key={tech.name}
-            >
-              <div className="flex justify-center items-center w-full h-full">
+            <div className="w-28 h-28 flex  " key={tech.name}>
+              <div className="flex  w-full h-full">
                 <BallCanvas icon={tech.icon} />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="flex flex-row h-full items-center">
-        <p className={`${styles.sectionSubText} w-52 border-sky-200`}>CI/CD</p>
-        <div className="flex flex-row flex-wrap gap-10 w-full">
+      <div className="flex flex-col h-full items-center ">
+        <p className={`${styles.sectionSubText} w-52 border-sky-200`}></p>
+        <div className="flex flex-row flex-wrap gap-10 w-full justify-evenly">
           {technologies.cicd.map((tech) => (
-            <div
-              className="w-28 h-28 flex justify-center items-center"
-              key={tech.name}
-            >
-              <div className="flex justify-center items-center w-full h-full">
+            <div className="w-28 h-28 flex " key={tech.name}>
+              <div className="flex w-full h-full">
                 <BallCanvas icon={tech.icon} />
               </div>
             </div>
@@ -93,4 +74,5 @@ const Tech = () => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default SectionWrapper(Tech, "tech");

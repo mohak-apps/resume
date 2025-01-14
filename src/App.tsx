@@ -1,12 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { BrowserRouter } from "react-router-dom";
-import {
-  Contact,
-  Experience,
-  Feedbacks,
-  Navbar,
-  Tech,
-} from "./components";
+import { Contact, Experience, Feedbacks, Navbar, Tech } from "./components";
 import Stars from "./components/canvas/Stars";
 
 const App = () => {
@@ -17,9 +11,12 @@ const App = () => {
           <Navbar />
           {/* <Hero /> */}
         </div>
-        {/* <About /> */}
+        {/*<About /> */}
         {/* <Works /> */}
-        <Tech />
+        <div className="relative z-0">
+          <div className="noise"></div>
+          <Tech />
+        </div>
         <Experience />
         <Feedbacks />
         <div className="relative z-0">
