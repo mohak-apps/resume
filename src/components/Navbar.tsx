@@ -13,7 +13,7 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex py-5 fixed top-0 z-20 transition-colors duration-[1000ms] ease-in-out border-inputboxes border-b-2 ${
+      } w-full flex py-5 fixed top-0 z-20 transition-colors duration-[500ms] ease-in-out border-inputboxes border-b-2 ${
         isScrolled ? "bg-primary" : ""
       }`}
     >

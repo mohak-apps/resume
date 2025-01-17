@@ -61,18 +61,6 @@ const technologies = {
   space: space,
   frontend: [
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Figma",
-      icon: figma,
-    },
-    {
       name: "HTML 5",
       icon: html,
     },
@@ -235,6 +223,5 @@ const testimonials = [
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
- 
 
 export { services, technologies, experiences, testimonials };

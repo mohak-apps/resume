@@ -4,6 +4,7 @@ import { Contact, Experience, Feedbacks, Navbar, Tech } from "./components";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
+import Stars from "./components/canvas/Stars";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,11 +50,11 @@ const App = () => {
         <div className="z-50 bg-primary relative">
           <Experience scrollYProgress={scrollYProgress || 0} />
         </div>
-        {/* <Feedbacks />
+        <Feedbacks scrollYProgress={undefined} />
         <div className="relative z-0">
-          <Contact />
+          <Contact scrollYProgress={undefined} />
           <Stars />
-        </div> */}
+        </div>
       </div>
     </BrowserRouter>
   );

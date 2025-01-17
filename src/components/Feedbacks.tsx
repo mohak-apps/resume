@@ -51,6 +51,9 @@ const Feedbacks = () => {
     <div className="mt-12 bg-black-100 rounded-[20px]">
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
+        style={{
+          boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Customize shadow
+        }}
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say</p>
