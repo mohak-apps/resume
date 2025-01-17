@@ -13,6 +13,7 @@ module.exports = {
         secondary: "#2a2f33",
         tertiary: '#8c8c9c',
   			inputboxes: '#bbb6a5',
+        "black-100": "#8c9491"
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

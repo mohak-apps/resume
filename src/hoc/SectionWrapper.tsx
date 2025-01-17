@@ -3,7 +3,7 @@ import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
 const SectionWrapper = (Component: React.ComponentType, idName: string) =>
-  function HOC() {
+  function HOC({ scrollYProgress }) {
     return (
       <motion.section
         variants={staggerContainer()}
@@ -15,7 +15,7 @@ const SectionWrapper = (Component: React.ComponentType, idName: string) =>
         <span className="hash-span" id={idName}>
           &nbsp;
         </span>
-        <Component />
+        <Component scrollYProgress={scrollYProgress} />
       </motion.section>
     );
   };

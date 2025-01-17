@@ -6,13 +6,16 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logom, menu, close } from "../assets/index";
 
-const Navbar = () => {
+const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-
   return (
     <nav
-      className={`${styles.paddingX} w-full flex py-5 fixed top-0 z-20 bg-primary`}
+      className={`${
+        styles.paddingX
+      } w-full flex py-5 fixed top-0 z-20 transition-colors duration-[1000ms] ease-in-out border-inputboxes border-b-2 ${
+        isScrolled ? "bg-primary" : ""
+      }`}
     >
       <div className="w-full items-center flex justify-between max-w-7xl mx-auto">
         <Link
@@ -22,9 +25,13 @@ const Navbar = () => {
             setActive("");
             window.scrollTo(0, 0);
           }}
-        > 
-          <img src={logom} alt="logo" className="w-10 h-10 object-contain mb-3" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+        >
+          <img
+            src={logom}
+            alt="logo"
+            className="w-10 h-10 object-contain mb-3"
+          />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex engraved-text">
             Mohak Londhe&nbsp;
             <span className="sm:block hidden">|&nbsp;Software Developer</span>
           </p>
