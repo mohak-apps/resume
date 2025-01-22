@@ -8,7 +8,6 @@ import Typewriter from "typewriter-effect";
 const Tech = ({ scrollYProgress }) => {
   return (
     <div className="relative w-full h-full bg-primary ">
-      
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
