@@ -11,12 +11,15 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex py-5 fixed top-0 z-20 transition-colors duration-[500ms] ease-in-out border-inputboxes border-b-2 ${
-        isScrolled ? "bg-primary" : ""
+      className={`w-screen flex py-5 fixed top-0 z-20 transition duration-1000 ease-in-out justify-center ${
+        isScrolled ? "bg-black/10 backdrop-blur-sm" : ""
       }`}
     >
+      <div
+        className={`absolute bottom-0 z-500 border-inputboxes border-b-2 transition-width duration-1000 ease-in-out ${
+          !isScrolled ? `w-[calc(100vw-150px)] mx-auto` : "w-screen"
+        }`}
+      />
       <div className="w-full items-center flex justify-between max-w-7xl mx-auto">
         <Link
           to="/"
@@ -31,9 +34,8 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
             alt="logo"
             className="w-10 h-10 object-contain mb-3"
           />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex engraved-text">
-            Mohak Londhe&nbsp;
-            <span className="sm:block hidden">|&nbsp;Software Developer</span>
+          <p className="text-inputboxes text-[18px] font-bold cursor-pointer flex engraved-text">
+            Mohak Londhe
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -41,7 +43,7 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-inputboxes" : "text-white"
+                active === link.title ? "text-white" : "text-inputboxes"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
@@ -49,7 +51,7 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        {/* <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt={"menu"}
@@ -78,7 +80,7 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

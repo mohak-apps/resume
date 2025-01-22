@@ -11,10 +11,6 @@ module.exports = {
         tertiary: "#8c8c9c",
         inputboxes: "#bbb6a5",
         "black-100": "#8c9491",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -65,6 +61,9 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      transitionDuration: {
+        1000: "1000ms",
       },
     },
   },
