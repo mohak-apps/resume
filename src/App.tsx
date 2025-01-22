@@ -37,18 +37,16 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div ref={container} className="relative z-0 h-[200vh] ">
+      <div ref={container} className="relative z-0 h-[200vh] bg-primary ">
         <Navbar isScrolled={isScrolled} />
-        <div className="top-0 h-screen">
+        <div className="h-screen">
           <Tech scrollYProgress={scrollYProgress || 0} />
-          <div className="noise"></div>
         </div>
         <div className="z-50 bg-primary relative">
           <Experience scrollYProgress={scrollYProgress || 0} />
+          <div className="noise"></div>
         </div>
         <div className="relative z-0">
-          <div className="noise h-screen"></div>
-
           <Contact scrollYProgress={undefined} />
         </div>
       </div>

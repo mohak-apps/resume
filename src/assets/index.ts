@@ -1,3 +1,4 @@
+import selfimg from "./resume/selfimgbg.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
@@ -25,8 +26,7 @@ import jenkins from "./tech/jenkins.png";
 import space from "./tech/space.webp";
 import mssql from "./tech/mssql.svg";
 
-
-import logom from "./mo.png";
+import mologo from "./resume/mologo_bg.png";
 
 import live54e from "./tech/live54e.png";
 import infy from "./tech/infy.png";
@@ -53,7 +53,7 @@ export {
   tailwind,
   typescript,
   threejs,
-  logom,
+  mologo,
   express,
   postgreSQL,
   redis,
@@ -66,4 +66,5 @@ export {
   softlink,
   lionbridge,
   space,
+  selfimg,
 };

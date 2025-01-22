@@ -25,6 +25,7 @@ import {
   mssql,
   figma,
   space,
+  selfimg,
 } from "../assets";
 
 export const navLinks = [
@@ -57,8 +58,12 @@ const services = [
   },
 ];
 
-const technologies = {
+const images = {
+  selfimg: selfimg,
   space: space,
+};
+
+const technologies = {
   frontend: [
     {
       name: "HTML 5",
@@ -224,4 +229,4 @@ const testimonials = [
   },
 ];
 
-export { services, technologies, experiences, testimonials };
+export { services, technologies, experiences, testimonials, images };

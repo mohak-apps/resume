@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logom, menu, close } from "../assets/index";
+import { mologo, menu, close } from "../assets/index";
 
 const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   return (
     <nav
-      className={`w-screen flex py-5 fixed top-0 z-20 transition duration-1000 ease-in-out justify-center ${
-        isScrolled ? "bg-black/10 backdrop-blur-sm" : ""
+      className={`w-screen flex fixed top-0 z-20 transition-all duration-1000 ease-in-out justify-center ${
+        isScrolled ? "bg-black/10 backdrop-blur-sm py-0" : "py-5"
       }`}
     >
       <div
@@ -29,21 +29,14 @@ const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={logom}
-            alt="logo"
-            className="w-10 h-10 object-contain mb-3"
-          />
-          <p className="text-inputboxes text-[18px] font-bold cursor-pointer flex engraved-text">
-            Mohak Londhe
-          </p>
+          <img src={mologo} alt="logo" className="w-14 h-14 object-contain" />
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-inputboxes"
+                active === link.title ? "text-inputboxes" : "text-white"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >

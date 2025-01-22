@@ -1,53 +1,47 @@
 import { BallCanvas } from "./canvas/index";
 import { SectionWrapper } from "../hoc/index";
-import { technologies } from "../constants";
+import { Img } from "react-image";
 import { motion, useTransform } from "framer-motion";
+import { images } from "@/constants";
+import Typewriter from "typewriter-effect";
 
 const Tech = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 0]);
-
   return (
-    <motion.div
-      style={{ scale, rotate }}
-      className="relative flex z-0 bg-white/30 mx-full my-40 backdrop-blur-md border-4 border-white rounded-2xl h-[500px]"
-    >
-      {technologies.frontend.map((tech) => {
-        return (
-          <div className="w-28 h-28 flex" key={tech.name}>
-            <BallCanvas icon={tech.icon} />
-          </div>
-        );
-      })}
-      {technologies.backend.map((tech) => {
-        return (
-          <div className="w-28 h-28 flex" key={tech.name}>
-            <BallCanvas icon={tech.icon} />
-          </div>
-        );
-      })}
-      {technologies.database.map((tech) => {
-        return (
-          <div className="w-28 h-28 flex" key={tech.name}>
-            <BallCanvas icon={tech.icon} />
-          </div>
-        );
-      })}
-      {technologies.cicd.map((tech) => {
-        return (
-          <div className="w-28 h-28 flex" key={tech.name}>
-            <BallCanvas icon={tech.icon} />
-          </div>
-        );
-      })}
-      {technologies.versionControl.map((tech) => {
-        return (
-          <div className="w-28 h-28 flex" key={tech.name}>
-            <BallCanvas icon={tech.icon} />
-          </div>
-        );
-      })}
-    </motion.div>
+    <div className="relative w-full h-full bg-primary ">
+      
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.5, duration: 0.4, ease: "easeInOut" },
+        }}
+        className="flex flex-row justify-center items-center mt-44 h-[50vh] mix-blend-lighten border-4"
+      >
+        <div className="relative h-full w-1/2">
+          <Img
+            src={images.selfimg}
+            alt="alt"
+            className="absolute  scale-150"
+          />
+        </div>
+        <div className="h-1/2 w-1/4 flex justify-start">
+          <Typewriter
+            options={{
+              strings: [
+                "Hello, I'm Mohak Londhe!",
+                "I am a developer.<br>Let's create something amazing.",
+              ],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 0, // Disable deletion
+            }}
+          />
+        </div>
+      </motion.div>
+      <div className="absolute w-32 h-32 bg-primary flex justify-center items-center transform bottom-1 right-1 text-2xl translate-x-1/2 translate-y-1/2 z-100">
+        &bull;
+      </div>
+    </div>
   );
 };
 

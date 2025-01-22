@@ -272,3 +272,7 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+.Typewriter__wrapper, .Typewriter__cursor {
+  color: #bbb6a5;
+}

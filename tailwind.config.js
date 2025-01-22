@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#333738",
+        primary: "#0f1010",
         secondary: "#2a2f33",
         tertiary: "#8c8c9c",
         inputboxes: "#bbb6a5",
@@ -14,6 +14,10 @@ module.exports = {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        shadow: {
+          '3d': '20px 20px 30px rgba(0, 0, 0, 0.2), -20px -20px 30px rgba(0, 0, 0, 0.1)',
+          '3d-hover': '30px 30px 50px rgba(0, 0, 0, 0.3), -30px -30px 50px rgba(0, 0, 0, 0.2)',
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
