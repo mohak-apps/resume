@@ -1,14 +1,14 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+// import { Suspense } from "react";
+// import { Canvas } from "@react-three/fiber";
+// import {
+//   Decal,
+//   Float,
+//   OrbitControls,
+//   Preload,
+//   useTexture,
+// } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+// import CanvasLoader from "../Loader";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 // const Ball = (props: any) => {

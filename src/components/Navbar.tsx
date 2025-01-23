@@ -2,13 +2,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { mologo, menu, close } from "../assets/index";
+import { mologo  } from "../assets/index";
 
 const Navbar = ({ isScrolled }: { isScrolled: unknown }) => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState("About");
   return (
     <nav
       className={`w-screen flex fixed top-0 z-20 transition-all duration-1000 ease-in-out justify-center ${

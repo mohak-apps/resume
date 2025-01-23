@@ -1,13 +1,13 @@
-import { BallCanvas } from "./canvas/index";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SectionWrapper } from "../hoc/index";
 import { Img } from "react-image";
-import { motion, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { images } from "@/constants";
 import Typewriter from "typewriter-effect";
 
-const Tech = ({ scrollYProgress }) => {
+const Tech = () => {
   return (
-    <div className="relative w-full h-full bg-primary ">
+    <div className="relative w-full h-full bg-primary">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -17,11 +17,7 @@ const Tech = ({ scrollYProgress }) => {
         className="flex flex-row justify-center items-center mt-44 h-[50vh] mix-blend-lighten border-4"
       >
         <div className="relative h-full w-1/2">
-          <Img
-            src={images.selfimg}
-            alt="alt"
-            className="absolute  scale-150"
-          />
+          <Img src={images.selfimg} alt="alt" className="absolute  scale-150" />
         </div>
         <div className="h-1/2 w-1/4 flex justify-start">
           <Typewriter

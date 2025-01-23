@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-const SectionWrapper = (Component: React.ComponentType, idName: string) =>
-  function HOC({ scrollYProgress }) {
+const SectionWrapper = (
+  Component: React.ComponentType<{ scrollYProgress: any }>,
+  idName: string
+) =>
+  function HOC({ scrollYProgress }: { scrollYProgress: any }) {
     return (
       <motion.section
         variants={staggerContainer()}

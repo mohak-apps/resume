@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { BrowserRouter } from "react-router-dom";
-import { Contact, Experience, Feedbacks, Navbar, Tech } from "./components";
+import { Contact, Experience, Navbar, Tech } from "./components";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
-import Stars from "./components/canvas/Stars";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const container = useRef({});
+  const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
@@ -37,17 +36,17 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div ref={container} className="relative z-0 h-[200vh] bg-primary ">
+      <div ref={container} className="relative z-0 bg-primary ">
         <Navbar isScrolled={isScrolled} />
-        <div className="h-screen">
+        <div className="relative h-screen">
           <Tech scrollYProgress={scrollYProgress || 0} />
         </div>
-        <div className="z-50 bg-primary relative">
+        <div className="relative h-screen">
           <Experience scrollYProgress={scrollYProgress || 0} />
           <div className="noise"></div>
         </div>
-        <div className="relative z-0">
-          <Contact scrollYProgress={undefined} />
+        <div className="relative h-screen z-0">
+          <Contact scrollYProgress={scrollYProgress || 0} />
         </div>
       </div>
     </BrowserRouter>
