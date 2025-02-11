@@ -11,12 +11,9 @@ import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/node.png";
-import reactjs from "./tech/reactjs.png";
+
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import express from "./tech/express.png";
 import postgreSQL from "./tech/postgreSQL.svg";
@@ -26,13 +23,25 @@ import jenkins from "./tech/jenkins.png";
 import space from "./tech/space.webp";
 import mssql from "./tech/mssql.svg";
 
-import mologo from "./resume/mologo_bg.png";
+import logo from "./logo.png";
 
-import live54e from "./tech/live54e.png";
-import infy from "./tech/infy.png";
-import capgemini from "./tech/capgemini.png";
-import softlink from "./tech/softlink.jpg";
-import lionbridge from "./tech/lionbridge.png";
+import live54e from "./experience/54eDevStudios.jpg";
+import infy from "./experience/Infosys.jpg";
+import capgemini from "./experience/capgemini.jpg";
+import softlink from "./experience/softlink.png";
+import lionbridge from "./experience/lionbridge.jpg";
+
+import spotlight from "./spotlight.jpg";
+import wall from "./wall2.png";
+
+import reactjs from "./skills/react.png";
+import typescript from "./skills/typescript.png";
+import nodejs from "./skills/nodejs.png";
+import mongodb from "./skills/mongo-db.png";
+
+import circularText from "./circularText.svg";
+import maple from "./maple.png";
+import mapleblack from "./mapleblack.png";
 
 export {
   mobile,
@@ -46,14 +55,10 @@ export {
   git,
   html,
   javascript,
-  mongodb,
-  nodejs,
-  reactjs,
   redux,
   tailwind,
-  typescript,
   threejs,
-  mologo,
+  logo,
   express,
   postgreSQL,
   redis,
@@ -67,4 +72,13 @@ export {
   lionbridge,
   space,
   selfimg,
+  spotlight,
+  wall,
+  reactjs,
+  typescript,
+  nodejs,
+  mongodb,
+  circularText,
+  maple,
+  mapleblack,
 };

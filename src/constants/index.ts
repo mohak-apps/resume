@@ -5,7 +5,6 @@ import {
   typescript,
   html,
   css,
-  reactjs,
   nodejs,
   mongodb,
   git,
@@ -23,6 +22,10 @@ import {
   mssql,
   space,
   selfimg,
+  spotlight,
+  wall,
+  reactjs,
+  circularText,
 } from "../assets";
 
 export const navLinks = [
@@ -57,6 +60,8 @@ const services = [
 
 const images = {
   selfimg: selfimg,
+  spotlight: spotlight,
+  wall: wall,
   space: space,
 };
 
@@ -77,10 +82,6 @@ const technologies = {
     {
       name: "TypeScript",
       icon: typescript,
-    },
-    {
-      name: "React JS / React Native",
-      icon: reactjs,
     },
   ],
   backend: [
@@ -135,11 +136,12 @@ const technologies = {
 
 const experiences = [
   {
-    title: "Software Developer",
-    company_name: "54e Dev Studios",
-    icon: live54e,
-    iconBg: "#FFF",
-    date: "January 2023 - June 2024",
+    count: "01",
+    designation: "Software Developer",
+    company: "54e Dev Studios",
+    color: "rgb(179,124,79)",
+    location: "Regina, SK",
+    tenure: "June 2022 - June 2024",
     points: [
       "Integrated new mobile gaming app specific features while optimizing existing code structure through custom hooks, resulting in a 30% improvement in page rendering speed and smoother navigation between pages.",
       "Developed complex game animations using React Native Reanimated and leveraged Skia to create high-performance graphics, delivering smooth and visually appealing animations that enhanced user engagement and visual appeal.",
@@ -148,11 +150,12 @@ const experiences = [
     ],
   },
   {
-    title: "Technology Analyst",
-    company_name: "Infosys Limited",
-    icon: infy,
-    iconBg: "#FFF",
-    date: "December 2018 - December 2021",
+    count: "02",
+    designation: "Technology Analyst",
+    company: "Infosys Limited",
+    color: "rgb(89, 111, 97)",
+    location: "Pune, India",
+    tenure: "December 2018 - December 2021",
     points: [
       "Developed and customized the Finacle application front end using React.js, leveraging the FEBA (Finacle E-Banking System) framework and utilized Bootstrap to enhance the user interface and create a responsive design.",
       "Collaborated with system designers, business analysts, and the in-house testing team during business requirements reviews at the client location, which facilitated the rapid delivery of critical bug fixes and new feature requirements.",
@@ -162,11 +165,12 @@ const experiences = [
     ],
   },
   {
-    title: "Associate Consultant",
-    company_name: "Capgemini Ltd",
-    icon: capgemini,
-    iconBg: "#FFF",
-    date: "October 2017 - December 2018",
+    count: "03",
+    designation: "Associate Consultant",
+    company: "Capgemini Ltd",
+    color: "rgb(111, 142, 153)",
+    location: "Pune, India",
+    tenure: "October 2017 - December 2018",
     points: [
       "Developed and maintained HSBC's internal web application based on wireframes using React.js to enhance user experience and streamline access to critical information. Implemented Node.js end points to facilitate calls to MuleSoft APIs, ensuring seamless integration between front-end and back-end services using Axios calls.",
       "Conducted test driven development using Jest and Enzyme for test automation achieving 85% coverage and reducing regression bug incidents.",
@@ -174,11 +178,12 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "SoftLink Global Ltd",
-    icon: softlink,
-    iconBg: "#FFF",
-    date: "October 2015 - October 2017",
+    count: "04",
+    designation: "Web Developer",
+    company: "SoftLink Global Ltd",
+    color: "rgb(117, 132, 106)",
+    location: "Mumbai, India",
+    tenure: "October 2015 - October 2017",
     points: [
       "Pioneered the adoption of React in the company transforming legacy ASP.NET interfaces into React JS for optimized performance, leading to a 50% improvement in responsiveness and reduced page load times.",
       "Developed React and Redux skeleton units and reusable components, and maintained a comprehensive SharePoint site documenting industry trends, core principles and best coding practices to improve framework familiarity and thus  expediting transition process.",
@@ -186,11 +191,12 @@ const experiences = [
     ],
   },
   {
-    title: "Apprentice Web Developer",
-    company_name: "Lionbridge Technologies Inc",
-    icon: lionbridge,
-    iconBg: "#FFF",
-    date: "May 2013 - August 2014",
+    count: "05",
+    designation: "Apprentice Web Developer",
+    company: "Lionbridge Technologies Inc",
+    color: "rgb(174, 102, 103)",
+    location: "Mumbai, India",
+    tenure: "May 2013 - August 2014",
     points: [
       "Implemented interactive learning courses and responsive UI pages using HTML5, CSS, JavaScript, and jQuery, while leveraging ASP.NET Web Forms, LINQ, and Entity Framework for back-end database access.",
       "Integrated interactive multimedia elements and gamification features into e-learning modules, resulting in a 30% increase in user engagement and course completion rates, while maintaining optimal performance across various browsers.",
@@ -226,4 +232,33 @@ const testimonials = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, images };
+const skills = [
+  {
+    skill: "react",
+    image: reactjs,
+  },
+  {
+    skill: "typeScript",
+    image: typescript,
+  },
+  {
+    skill: "nodejs",
+    image: nodejs,
+  },
+  {
+    skill: "mongodb",
+    image: mongodb,
+  },
+];
+
+const circular = circularText;
+
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  images,
+  skills,
+  circular,
+};

@@ -3,38 +3,110 @@ import { SectionWrapper } from "../hoc/index";
 import { Img } from "react-image";
 import { motion } from "framer-motion";
 import { images } from "@/constants";
-import Typewriter from "typewriter-effect";
+import { reactjs, typescript, nodejs, mongodb } from "@/assets";
+import { Button } from "./ui/button";
+import { MdOutlineDoubleArrow } from "react-icons/md";
 
 const Tech = () => {
   return (
-    <div className="relative w-full h-full bg-primary">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 0.5, duration: 0.4, ease: "easeInOut" },
-        }}
-        className="flex flex-row justify-center items-center mt-44 h-[50vh] mix-blend-lighten border-4"
-      >
-        <div className="relative h-full w-1/2">
-          <Img src={images.selfimg} alt="alt" className="absolute  scale-150" />
+    <div className="flex flex-row justify-start items-center mt-14 h-[75vh] w-full mix-blend-lighten">
+      <div className="h-full w-1/2 flex justify-center items-center flex-col bg-black/10 backdrop-blur-sm">
+        <div className="flex flex-col h-full justify-center gap-24">
+          <div>
+            <span className="text-2xl">I'm, </span>
+            <span className="font-RockSaltRegular text-2xl">Mohak Londhe</span>
+            <br />
+            <span className="text-2xl">
+              I build software that works (most of the time :p)
+            </span>
+          </div>
+          <div>
+            <div className="text-2xl">Expertise in:</div>
+            <div className="flex flex-row gap-2">
+              <img
+                title="React"
+                src={reactjs}
+                alt="react"
+                style={{ height: 50, width: 50 }}
+                className="cursor-pointer"
+              />
+              <img
+                title="TypeScript"
+                src={typescript}
+                alt="ts"
+                style={{ height: 50, width: 50 }}
+                className="cursor-pointer"
+              />
+              <img
+                title="NodeJS"
+                src={nodejs}
+                alt="node"
+                style={{ height: 50, width: 50 }}
+                className="cursor-pointer"
+              />
+              <img
+                title="MongoDB"
+                src={mongodb}
+                alt="mongo"
+                style={{ height: 50, width: 50 }}
+                className="cursor-pointer"
+              />
+            </div>
+            <br />
+            <div>
+              <Button className="glow-button">Download Resume</Button>
+            </div>
+          </div>
         </div>
-        <div className="h-1/2 w-1/4 flex justify-start">
-          <Typewriter
-            options={{
-              strings: [
-                "Hello, I'm Mohak Londhe!",
-                "I am a developer.<br>Let's create something amazing.",
-              ],
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 0, // Disable deletion
-            }}
-          />
+      </div>
+      <div className="absolute right-32 top-0 h-full w-1/4  justify-start items-start bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(0,0,0,1)),url('./assets/glass.jpg')] bg-cover bg-no-repeat">
+        <div className="absolute bg-black/10 backdrop-blur-[1.5px] w-full h-full z-10"></div>
+        <div className="absolute right-10 bottom-14 z-10">
+          <div className="group glow-spin">
+            <div className="absolute rounded-full flex justify-center items-center z-20">
+              <MdOutlineDoubleArrow
+                fontSize={24}
+                className="group-hover:rotate-90 transition-transform duration-500"
+              />
+            </div>
+            <svg
+              width="250"
+              height="100"
+              viewBox="0 0 250 250"
+              className="relative animate-spin bg-transparent"
+              style={{
+                animation: "rotateAnimation 15s linear infinite",
+              }}
+            >
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 125, 125 m -100, 0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"
+                />
+              </defs>
+              <text
+                fill="white"
+                font-size="22"
+                font-weight="bold"
+                letter-spacing="12"
+              >
+                <textPath
+                  href="#circlePath"
+                  startOffset="50%"
+                  text-anchor="middle"
+                  color="#fff"
+                >
+                  Contact. Contact. Contact.
+                </textPath>
+              </text>
+            </svg>
+          </div>
         </div>
-      </motion.div>
-      <div className="absolute w-32 h-32 bg-primary flex justify-center items-center transform bottom-1 right-1 text-2xl translate-x-1/2 translate-y-1/2 z-100">
-        &bull;
+        <Img
+          src={images.selfimg}
+          alt="alt"
+          className="absolute -left-10 bottom-44  bg-transparent"
+        />
       </div>
     </div>
   );

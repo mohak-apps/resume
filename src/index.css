@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Montserrat-Variable"; /* Name your font */
+  src: url("./assets/font/Montserrat-Variable.ttf") format("truetype"); /* Path to your font file */
+  font-weight: 300; /* Adjust weight if applicable */
+  font-style: normal; /* Adjust style if applicable */
+}
+@font-face {
+  font-family: "RockSalt-Regular"; /* Name your font */
+  src: url("./assets/font/RockSalt-Regular.ttf") format("truetype"); /* Path to your font file */
+  font-weight: 300; /* Adjust weight if applicable */
+  font-style: normal; /* Adjust style if applicable */
+}
+@font-face {
+  font-family: "BaseNeueTrial-Thin"; /* Name your font */
+  src: url("./assets/font/BaseNeueTrial-Thin.ttf") format("truetype"); /* Path to your font file */
+  font-weight: 300; /* Adjust weight if applicable */
+  font-style: normal; /* Adjust style if applicable */
+}
+@font-face {
+  font-family: "BaseNeueTrial-WideBlack"; /* Name your font */
+  src: url("./assets/font/BaseNeueTrial-WideBlack.ttf") format("truetype"); /* Path to your font file */
+  font-weight: 300; /* Adjust weight if applicable */
+  font-style: normal; /* Adjust style if applicable */
+}
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +35,15 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+html * {
+  font-family: "Montserrat-Variable", sans-serif;
+}
+
+.hoverFamily {
+  font-family: "BaseNeueTrial-WideBlack", sans-serif !important;
+  transition: font-family 0.3s ease;
 }
 
 .hash-span {
@@ -130,6 +163,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-blend-mode: overlay;
   background-image: url(./noise.png);
   background-repeat: repeat; /* Repeat the image both horizontally and vertically */
   background-size: auto; /* Use the natural size of the image for clarity */
@@ -138,6 +172,141 @@
   height: 100%;
   z-index: -1; /* Ensure it appears below other content */
   opacity: 0.2;
+}
+
+.almostGreen {
+  background-color: rgb(111, 142, 153);
+}
+
+.almostBlue {
+  background-color: #6f8e99;
+}
+
+.almostOrange {
+  background-color: rgb(179,124,79);
+}
+
+.noise2 {
+  top: 0;
+  left: 0;
+  background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+  background-size: auto; /* Use the natural size of the image for clarity */
+  background-position: top left; /* Optional: Specify the starting point of the tiling */
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.wall {
+  background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+  background-size: auto; /* Use the natural size of the image for clarity */
+  background-position: top left; /* Optional: Specify the starting point of the tiling */
+  width: 100%;
+  height: 100%;
+}
+
+/* Glow button */
+.glow-button {
+  @apply relative px-14 py-10 bg-[#161a20] border-none rounded-2xl;
+}
+
+.glow-button::after {
+  @apply absolute h-[107%] w-[102%] flex justify-center items-center -z-10 rounded-2xl;
+  content: "";
+  background: linear-gradient(to bottom right, #006cff, #e100ff);
+}
+
+.glow-button:hover {
+  @apply z-10 shadow-[10px_0_50px_#008cff,_-10px_0_50px_#e100ff];
+}
+
+/* Glow spin */
+.glow-spin {
+  @apply relative w-24 h-24 bg-[#161a20] border-none rounded-full flex justify-center items-center;
+}
+
+.glow-spin::after {
+  @apply absolute h-[107%] w-[102%] flex justify-center items-center -z-10 rounded-full;
+  content: "";
+  background: linear-gradient(to bottom right, #006cff, #e100ff);
+}
+
+.glow-spin:hover {
+  @apply z-10 shadow-[10px_0_50px_#008cff,_-10px_0_50px_#e100ff];
+}
+
+/* circular text */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@layer components {
+  .eye {
+    @apply relative block mx-5 my-0 rounded-full shadow-[0px_5px_45px_rgba(0,0,0,0.2),_inset_0px_0px_15px_#f2761e,_inset_0px_0px_25px_#f2761e];
+  }
+
+  .pupil {
+    @apply content-[''] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[15px] h-[15px] bg-[#000] rounded-full border-[10px] border-[#2196f3] box-border;
+  }
+
+  .bg-box-style {
+    @apply flex-1 border-2 rounded-lg border-[#1D1D1D] backdrop-blur-sm hover:scale-[1.02] transition-all duration-300 hover:border-2 hover:border-[#1D1D1D] flex justify-center items-center;
+  }
+
+  .flex-container {
+    @apply h-screen w-full flex flex-row gap-5 p-20;
+  }
+
+  .flex-column {
+    @apply flex-1 rounded-lg flex flex-col gap-5;
+  }
+}
+
+/* cards */
+/* General Card Wrapper */
+.card-container {
+  @apply flex flex-wrap justify-center gap-10;
+}
+
+/* Individual Card */
+.card {
+  @apply flex justify-center items-center flex-col w-[500px] h-[500px] cursor-pointer;
+}
+
+/* Upper Section (Title Section) */
+.card-title {
+  @apply relative h-1/2  w-full flex justify-center items-center 
+         border-gray-600 border-2 transition-all duration-500 ease-in-out 
+         z-50 bg-gray-600;
+}
+
+/* Lower Section (Details) */
+.card-details {
+  @apply h-1/2 w-full   bg-stone-50 box-border 
+         flex justify-center items-center transition-all duration-1000 
+         ease-in-out shadow-[0px_20px_50px_rgba(0,0,0,0.8)] z-10;
+}
+
+/* Custom Bullet List */
+.card-list {
+  @apply list-none pl-5 custom-bullets text-shark;
+}
+
+.custom-bullets li {
+  position: relative;
+}
+
+.custom-bullets li::before {
+  content: "\2022"; /* Unicode for bullet */
+  color: #fff; /* Bullet color (change as needed) */
+  font-size: 20px; /* Bullet size */
+  position: absolute;
+  left: -20px; /* Adjust bullet position */
 }
 
 @keyframes mulShdSpin {
@@ -273,6 +442,7 @@
   }
 }
 
-.Typewriter__wrapper, .Typewriter__cursor {
+.Typewriter__wrapper,
+.Typewriter__cursor {
   color: #bbb6a5;
 }

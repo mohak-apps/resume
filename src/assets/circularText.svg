@@ -1,0 +1,16 @@
+<div class="flex justify-center items-center h-screen bg-gray-100">
+	<svg width="200" height="200" viewBox="0 0 200 200" class="relative">
+		<!-- Circular Path -->
+		<defs>
+			<path id="circlePath" d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+		</defs>
+		<!-- Text on Path -->
+		<text fill="black" font-size="14" font-weight="bold">
+			<textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+				Contact
+			</textPath>
+		</text>
+		<!-- Circle in Center -->
+		<circle cx="100" cy="100" r="30" fill="blue" />
+	</svg>
+</div>
