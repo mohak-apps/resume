@@ -5,6 +5,7 @@ import VanillaTilt from "vanilla-tilt";
 import { useRef, useEffect, useState } from "react";
 import { experiences } from "@/constants";
 import { Button } from "./ui/button";
+import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 
 const ExperienceAtAGlance = () => {
   const tiltRef = useRef(null);
@@ -52,6 +53,10 @@ const ExperienceAtAGlance = () => {
       />
       <div className="noise" />
       <div className="h-full flex flex-row justify-evenly items-center">
+        <FaLessThan
+          onClick={handleNext}
+          className="cursor-pointer hover:drop-shadow-[0_0_10px_#fff]"
+        />
         <div className="flex h-[65vh] w-[20vw] flex-col justify-evenly items-end">
           <div className="flex-col w-full h-[20vh] justify-evenly flex items-end text-4xl">
             <div className="font-BaseNeueTrialThin text-right">
@@ -74,7 +79,7 @@ const ExperienceAtAGlance = () => {
               className="relative rounded-sm h-full w-full shadow-[20px_20px_50px_rgba(0,0,0,0.5)] bg-[rgba(255,255,255,0.1)] overflow-hidden 
             border-t border-l border-[rgba(255,255,255,0.5)] backdrop-blur-sm"
             >
-              <div className="font-BaseNeueTrialWideBlack text-3xl text-end pr-1">
+              <div className="font-BaseNeueTrialWideBlack text-end pr-1 text-xl">
                 {company}
               </div>
               <h2 className="absolute bottom-0 right-0 text-9xl text-[rgba(255,255,255,0.2)]">
@@ -83,13 +88,11 @@ const ExperienceAtAGlance = () => {
             </div>
           </div>
         </div>
-
-        <Button
-          className="flex flex-col h-[65vh] w-[20vw] justify-center items-center border-2"
+        <FaGreaterThan
           onClick={handleNext}
-        >
-          NEXT
-        </Button>
+          className="cursor-pointer hover:drop-shadow-[0_0_10px_#fff]"
+        />
+
         {/* Experience */}
       </div>
     </div>

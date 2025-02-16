@@ -139,7 +139,7 @@ const experiences = [
     count: "01",
     designation: "Software Developer",
     company: "54e Dev Studios",
-    color: "rgb(179,124,79)",
+    color: "rgba(142, 117, 81)",
     location: "Regina, SK",
     tenure: "June 2022 - June 2024",
     points: [
@@ -153,7 +153,7 @@ const experiences = [
     count: "02",
     designation: "Technology Analyst",
     company: "Infosys Limited",
-    color: "rgb(89, 111, 97)",
+    color: "rgb(155, 75, 96)",
     location: "Pune, India",
     tenure: "December 2018 - December 2021",
     points: [

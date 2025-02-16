@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { gsap } from "gsap";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc/index";
@@ -14,6 +15,7 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
+  const textRef = useRef(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -53,10 +55,54 @@ const Contact = () => {
       });
   };
 
+  const handleScroll = () => {
+    const scrollY = window.scrollY; // Get current scroll position
+    const maxScroll = window.innerHeight * 0.5; // 50vh target
+
+    // Calculate font-size dynamically (from 15px to 50px)
+    let fontSize = Math.max(15 + (scrollY / maxScroll) * 10, 50);
+
+    console.log(fontSize)
+    // Apply GSAP animation for smooth transition
+    gsap.to(textRef.current, {
+      attr: { "font-size": fontSize },
+      duration: 0.1,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="flex w-full justify-center flex-col">
-      <h3 className={styles.sectionHeadText}>let's work together</h3>
-      <div className="flex flex-row">
+    <div className="flex w-full justify-center flex-col relative">
+      <div
+        style={{
+          height: "200vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <svg
+          viewBox="0 0 200 200"
+          version="1.1"
+          style={{
+            position: "absolute",
+            top: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        >
+          <g fill="navy">
+            <text ref={textRef} x="10" y="25" fontSize="15">
+              <tspan>Contact Me</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+      {/* <div className="flex flex-row">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -140,7 +186,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
