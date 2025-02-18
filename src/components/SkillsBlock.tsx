@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const SkillsBlock = () => {
   return (
-    <section className="relative h-[100vh]  flex justify-between flex-col bg-primary">
+    <section className="relative h-[100vh]  flex justify-between flex-col bg-yellow-900">
       <motion.div className="relative z-0 bg-prdimary img min-h-screen bg-cover bg-fixed">
         <div className=""></div>
         <div className="flex-container">

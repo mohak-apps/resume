@@ -9,6 +9,7 @@ import SkillsBlock from "./components/SkillsBlock";
 import Eye from "./components/Eyes";
 import ExperienceAtAGlance from "./components/ExperienceAtAGlance";
 import { experiences } from "./constants";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,14 +50,14 @@ const App = () => {
     <BrowserRouter>
       <div ref={container} className="relative z-0 bg-primary">
         <Navbar isScrolled={isScrolled} />
-        <div className="relative h-screen">
+        <div className="relative h-screen" id="about">
           <Tech scrollYProgress={scrollYProgress || 0} />
         </div>
         {/* <Experience scrollYProgress={scrollYProgress || 0} /> */}
         {/* <div className="relative">
           <HorizontalScrollCarousel />
         </div> */}
-        <div className="relative h-screen">
+        <div className="relative h-screen" id="work">
           <ExperienceAtAGlance />
         </div>
         {/* <div>
@@ -70,10 +71,9 @@ const App = () => {
             </button>
           </div>
         </div> */}
-        <SkillsBlock />
-        <div className="relative h-screen z-0">
-          <Contact scrollYProgress={scrollYProgress || 0} />
-        </div>
+        {/* <SkillsBlock /> */}
+        <Contact />
+        <Footer />
       </div>
     </BrowserRouter>
   );

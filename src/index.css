@@ -18,6 +18,12 @@
   font-style: normal; /* Adjust style if applicable */
 }
 @font-face {
+  font-family: "BaseNeueTrial-Wide"; /* Name your font */
+  src: url("./assets/font/BaseNeueTrial-Wide.ttf") format("truetype"); /* Path to your font file */
+  font-weight: 300; /* Adjust weight if applicable */
+  font-style: normal; /* Adjust style if applicable */
+}
+@font-face {
   font-family: "BaseNeueTrial-WideBlack"; /* Name your font */
   src: url("./assets/font/BaseNeueTrial-WideBlack.ttf") format("truetype"); /* Path to your font file */
   font-weight: 300; /* Adjust weight if applicable */
@@ -38,7 +44,7 @@
 }
 
 html * {
-  font-family: "Montserrat-Variable", sans-serif;
+  font-family: "BaseNeueTrial-Wide", sans-serif;
 }
 
 .hoverFamily {
@@ -174,33 +180,25 @@ html * {
   opacity: 0.2;
 }
 
-.almostGreen {
-  background-color: rgb(111, 142, 153);
+.line {
+  stroke: rgb(248, 247, 229);
+  stroke-width: 1px;
+  stroke-dasharray: 2.7;
+  stroke-dashoffset: 2.7;
 }
 
-.almostBlue {
-  background-color: #6f8e99;
+@layer components {
+  .dot {
+    @apply w-[5px] h-[5px] bg-[#076A21] rounded-full;
+  }
 }
 
-.almostOrange {
-  background-color: rgb(179,124,79);
+.innerContactTitle {
+  box-sizing: border-box;
 }
 
-.noise2 {
-  top: 0;
-  left: 0;
-  background-repeat: repeat; /* Repeat the image both horizontally and vertically */
-  background-size: auto; /* Use the natural size of the image for clarity */
-  background-position: top left; /* Optional: Specify the starting point of the tiling */
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-}
-
-.wall {
-  background-repeat: repeat; /* Repeat the image both horizontally and vertically */
-  background-size: auto; /* Use the natural size of the image for clarity */
-  background-position: top left; /* Optional: Specify the starting point of the tiling */
+.innerContactTitle svg {
+  display: block;
   width: 100%;
   height: 100%;
 }

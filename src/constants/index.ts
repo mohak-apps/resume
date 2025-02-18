@@ -31,15 +31,15 @@ import {
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "about",
   },
   {
     id: "work",
-    title: "Work",
+    title: "work",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "contact",
   },
 ];
 
@@ -139,7 +139,7 @@ const experiences = [
     count: "01",
     designation: "Software Developer",
     company: "54e Dev Studios",
-    color: "rgba(142, 117, 81)",
+    color: "no color",
     location: "Regina, SK",
     tenure: "June 2022 - June 2024",
     points: [
@@ -153,7 +153,7 @@ const experiences = [
     count: "02",
     designation: "Technology Analyst",
     company: "Infosys Limited",
-    color: "rgb(155, 75, 96)",
+    color: "rgba(70,128,129,255)",
     location: "Pune, India",
     tenure: "December 2018 - December 2021",
     points: [
@@ -194,7 +194,7 @@ const experiences = [
     count: "05",
     designation: "Apprentice Web Developer",
     company: "Lionbridge Technologies Inc",
-    color: "rgb(174, 102, 103)",
+    color: "rgba(142, 117, 81)",
     location: "Mumbai, India",
     tenure: "May 2013 - August 2014",
     points: [

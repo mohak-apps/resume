@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { textVariant } from "../utils/motion";
 import VanillaTilt from "vanilla-tilt";
 import { useRef, useEffect, useState } from "react";
 import { experiences } from "@/constants";
-import { Button } from "./ui/button";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 
 const ExperienceAtAGlance = () => {
@@ -15,6 +12,12 @@ const ExperienceAtAGlance = () => {
     setClicked(true);
     const count = expCount + 1;
     setExpCount(count === 5 ? 0 : count);
+  };
+
+  const handleBack = () => {
+    setClicked(true);
+    const count = expCount - 1;
+    setExpCount(count === 5 ? 0 : count === -1 ? 4 : count);
   };
 
   const [clicked, setClicked] = useState(false);
@@ -40,7 +43,7 @@ const ExperienceAtAGlance = () => {
     experiences[expCount];
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden">
       <motion.div
         key={expCount}
         initial={{ scale: 0, backgroundColor: experiences[expCount].color }}
@@ -54,7 +57,7 @@ const ExperienceAtAGlance = () => {
       <div className="noise" />
       <div className="h-full flex flex-row justify-evenly items-center">
         <FaLessThan
-          onClick={handleNext}
+          onClick={handleBack}
           className="cursor-pointer hover:drop-shadow-[0_0_10px_#fff]"
         />
         <div className="flex h-[65vh] w-[20vw] flex-col justify-evenly items-end">
@@ -93,7 +96,6 @@ const ExperienceAtAGlance = () => {
           className="cursor-pointer hover:drop-shadow-[0_0_10px_#fff]"
         />
 
-        {/* Experience */}
       </div>
     </div>
   );
