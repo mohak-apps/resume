@@ -1,10 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
+
+type Position = "absolute" | "relative" | "fixed" | "inherit" | "static" | undefined;
+
 
 const Contact = () => {
   const [styleHeight, setStyleHeight] = useState(200);
-  const [stylePosition, setStylePosition] = useState("inherit");
+  const [stylePosition, setStylePosition] = useState<Position>("inherit");
   const [styleAlign, setStyleAlign] = useState("flex-start");
-  const contactRef = useRef(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
     if (!contactRef.current) return;
@@ -104,7 +107,6 @@ const Contact = () => {
                 className="cls-1"
                 d="M797,310.48h-52.44V56.38h-20.7V0h93.83v56.38h-36.08v4.93h6.51c2.63,0,4.76.79,6.41,2.37,1.64,1.58,2.46,3.75,2.46,6.51v240.3Z"
               ></path>
-             
             </svg>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { experiences } from "@/constants";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 
 const ExperienceAtAGlance = () => {
-  const tiltRef = useRef(null);
+  const tiltRef = useRef<HTMLDivElement  & { vanillaTilt?: VanillaTilt }>(null);
   const [expCount, setExpCount] = useState(0);
 
   const handleNext = () => {

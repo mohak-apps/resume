@@ -3,12 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Contact, Navbar, Tech } from "./components";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
-import HorizontalScrollCarousel from "./components/HorizontalScrollCarousel";
-import SkillsBlock from "./components/SkillsBlock";
-import Eye from "./components/Eyes";
+import { useScroll } from "framer-motion";
 import ExperienceAtAGlance from "./components/ExperienceAtAGlance";
-import { experiences } from "./constants";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -18,13 +14,6 @@ const App = () => {
     target: container,
     offset: ["start start", "end end"],
   });
-  const [clicked, setClicked] = useState(false);
-  const [position] = useState({ x: "50%", y: "50%" });
-
-  const handleClick = () => {
-    setClicked(true);
-    // setTimeout(() => setClicked(false), 1500);
-  };
 
   useEffect(() => {
     // Function to handle scroll event

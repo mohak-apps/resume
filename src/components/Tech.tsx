@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { SectionWrapper } from "../hoc/index";
 import { Img } from "react-image";
-import { motion } from "framer-motion";
 import { images } from "@/constants";
 import { reactjs, typescript, nodejs, mongodb } from "@/assets";
 import { Button } from "./ui/button";

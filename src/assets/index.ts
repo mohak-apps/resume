@@ -34,7 +34,7 @@ import lionbridge from "./experience/lionbridge.jpg";
 import spotlight from "./spotlight.jpg";
 import wall from "./wall2.png";
 
-import reactjs from "./skills/react.png";
+import reactjs from "./skills/reactjs.png";
 import typescript from "./skills/typescript.png";
 import nodejs from "./skills/nodejs.png";
 import mongodb from "./skills/mongo-db.png";

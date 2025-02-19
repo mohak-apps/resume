@@ -19,7 +19,7 @@ const Eye: React.FC<EyeProps> = ({
   });
 
   // Calculate pupil position based on mouse movement
-  const handleMouseMove = useCallback((event) => {
+  const handleMouseMove = useCallback((event: MouseEvent) => {
     const eye = document.querySelector(".eye");
     const pupil = document.querySelector(".pupil");
 

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { SectionWrapper } from "../hoc/index";
 
 const Footer = () => {
   const alertFlagRef = useRef(false); // Create ref for the alert flag

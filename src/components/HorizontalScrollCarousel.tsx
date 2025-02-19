@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { images } from "@/constants";
-import { styles } from "@/styles";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -33,30 +31,11 @@ const cardData = [
   },
 ];
 
-const Card = ({ card, index }: { card: any; index: number }) => {
-  return (
-    <div key={index} className="group card">
-      <div className="card-title">
-        <div className="card-title-text">{card.title}</div>
-      </div>
-      <div className="card-details">
-        <ul className="card-list">
-          <li>{card.role}</li>
-          <li>{card.duration}</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+ 
 
-  const headerRef = useRef(null);
-  const [isSticky, setIsSticky] = useState(false);
-  const [fixedTop, setFixedTop] = useState(0);
+  const [_, setFixedTop] = useState(0);
 
   const [positionIndexes, setPositionIndexes] = useState([1, 0, 4, 3, 2]);
 
@@ -93,9 +72,7 @@ const HorizontalScrollCarousel = () => {
     const viewportHeight = window.innerHeight;
 
     if (scrollPosition < 2 * viewportHeight) {
-      setIsSticky(true); // Sticky until 200vh
     } else {
-      setIsSticky(false); // Remove stickiness after 200vh
       setFixedTop(viewportHeight + 40);
     }
   };
@@ -107,7 +84,6 @@ const HorizontalScrollCarousel = () => {
     };
   }, []);
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
     <section
@@ -116,7 +92,7 @@ const HorizontalScrollCarousel = () => {
     >
       <div className="w-full h-full flex justify-center items-center flex-col bg-primary">
         <motion.div className="h-[90vh] relative flex gap-4 card-container justify-center  ">
-          {cardData.map((card, index) => {
+          {cardData.map((_, index) => {
             return (
               <motion.div
                 key={index}
