@@ -170,7 +170,7 @@ html * {
   top: 0;
   left: 0;
   background-blend-mode: overlay;
-  background-image: url(./noise.png);
+  background-image: url(/noise.png);
   background-repeat: repeat; /* Repeat the image both horizontally and vertically */
   background-size: auto; /* Use the natural size of the image for clarity */
   background-position: top left; /* Optional: Specify the starting point of the tiling */

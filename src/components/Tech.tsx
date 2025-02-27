@@ -61,7 +61,7 @@ const Tech = () => {
       <div className="absolute right-32 top-0 h-full w-1/4  justify-start items-start bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(0,0,0,1)),url('./assets/glass.jpg')] bg-cover bg-no-repeat">
         <div className="absolute bg-black/10 backdrop-blur-[1.5px] w-full h-full z-10"></div>
         <div className="absolute right-10 bottom-14 z-10">
-          <a className="group glow-spin cursor-pointer" href="#footer">
+          <a className="group glow-spin cursor-pointer" href="#contact">
             <div className="absolute rounded-full flex justify-center items-center z-20">
               <MdOutlineDoubleArrow
                 fontSize={24}
