@@ -14,7 +14,6 @@ import javascript from "./tech/javascript.png";
 
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
 import express from "./tech/express.png";
 import postgreSQL from "./tech/postgreSQL.svg";
 import redis from "./tech/redis.png";
@@ -57,7 +56,6 @@ export {
   javascript,
   redux,
   tailwind,
-  threejs,
   logo,
   express,
   postgreSQL,
