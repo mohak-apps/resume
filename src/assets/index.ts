@@ -24,7 +24,7 @@ import mssql from "./tech/mssql.svg";
 import logo from "./logo.png";
 
 import live54e from "./experience/54eDevStudios.jpg";
-import infy from "./experience/Infosys.jpg";
+import infy from "./experience/infosys.jpg";
 import capgemini from "./experience/capgemini.jpg";
 import softlink from "./experience/softlink.png";
 import lionbridge from "./experience/lionbridge.jpg";
