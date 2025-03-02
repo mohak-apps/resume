@@ -15,7 +15,6 @@ import javascript from "./tech/javascript.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import express from "./tech/express.png";
-import postgreSQL from "./tech/postgreSQL.svg";
 import redis from "./tech/redis.png";
 import azure from "./tech/azure.png";
 import jenkins from "./tech/jenkins.png";
@@ -58,7 +57,6 @@ export {
   tailwind,
   logo,
   express,
-  postgreSQL,
   redis,
   azure,
   jenkins,

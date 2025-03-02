@@ -10,7 +10,6 @@ import {
   git,
   docker,
   express,
-  postgreSQL,
   redis,
   azure,
   jenkins,
@@ -93,10 +92,6 @@ const technologies = {
     {
       name: "MongoDB",
       icon: mongodb,
-    },
-    {
-      name: "PostgreSQL",
-      icon: postgreSQL,
     },
     {
       name: "Redis",
