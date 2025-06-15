@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
-  font-family: "Montserrat-Variable"; /* Name your font */
-  src: url("./assets/font/Montserrat-Variable.ttf") format("truetype"); /* Path to your font file */
-  font-weight: 300; /* Adjust weight if applicable */
-  font-style: normal; /* Adjust style if applicable */
-}
-@font-face {
   font-family: "RockSalt-Regular"; /* Name your font */
   src: url("./assets/font/RockSalt-Regular.ttf") format("truetype"); /* Path to your font file */
   font-weight: 300; /* Adjust weight if applicable */
@@ -14,12 +8,6 @@
 @font-face {
   font-family: "BaseNeueTrial-Thin"; /* Name your font */
   src: url("./assets/font/BaseNeueTrial-Thin.ttf") format("truetype"); /* Path to your font file */
-  font-weight: 300; /* Adjust weight if applicable */
-  font-style: normal; /* Adjust style if applicable */
-}
-@font-face {
-  font-family: "BaseNeueTrial-Wide"; /* Name your font */
-  src: url("./assets/font/BaseNeueTrial-Wide.ttf") format("truetype"); /* Path to your font file */
   font-weight: 300; /* Adjust weight if applicable */
   font-style: normal; /* Adjust style if applicable */
 }
