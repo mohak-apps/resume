@@ -81,7 +81,7 @@ const Works = () => {
           TypeScript (JavaScript ES2015), HTML & CSS (Bootstrap / Tailwind CSS),
           Jest & Enzyme (Unit Testing Frameworks), JSON & XML Backend
           Technologies: NodeJS (Express), .NET Databases: MongoDB, Redis,
-          PostgreSQL, MS SQL Server CI/CD Pipelines: Git, Docker
+          MS SQL Server CI/CD Pipelines: Git, Docker
           (Containerization), Jenkins (CI/CD) Version Control and Collaboration
           Tools: GitHub, Microsoft Azure Soft Skills: Fluent Verbal / Written
           Communication, Quick learner, Self-directed, Team Player

@@ -14,9 +14,7 @@ import javascript from "./tech/javascript.png";
 
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
 import express from "./tech/express.png";
-import postgreSQL from "./tech/postgreSQL.svg";
 import redis from "./tech/redis.png";
 import azure from "./tech/azure.png";
 import jenkins from "./tech/jenkins.png";
@@ -26,7 +24,7 @@ import mssql from "./tech/mssql.svg";
 import logo from "./logo.png";
 
 import live54e from "./experience/54eDevStudios.jpg";
-import infy from "./experience/Infosys.jpg";
+import infy from "./experience/infosys.jpg";
 import capgemini from "./experience/capgemini.jpg";
 import softlink from "./experience/softlink.png";
 import lionbridge from "./experience/lionbridge.jpg";
@@ -57,10 +55,8 @@ export {
   javascript,
   redux,
   tailwind,
-  threejs,
   logo,
   express,
-  postgreSQL,
   redis,
   azure,
   jenkins,
